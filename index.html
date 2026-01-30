@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>STARKXXX - DARK LIQUID GLASS</title>
+    <title>STARKXXX - GITHUB READY</title>
     <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Press+Start+2P&family=Orbitron:wght@700&display=swap" rel="stylesheet">
     
     <style>
@@ -14,6 +14,7 @@
             --text: #ffffff;
             --accent: #ff0000;
             --pixel-font: 'Press Start 2P', cursive;
+            /* Pastikan nama file di Github sama persis huruf kecilnya */
             --pfp-src: url('pp.jpg');
             --banner-src: url('banner.jpg');
         }
@@ -29,10 +30,10 @@
             padding-bottom: 120px;
         }
 
+        /* Background Fix untuk Github Pages */
         .bg-fix { position: fixed; inset: 0; background: url('wpp3.jpg') no-repeat center center; background-size: cover; z-index: -2; }
         .bg-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.51); z-index: -1; }
 
-        /* UNIVERSAL BGM TOGGLE */
         .bgm-universal {
             position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%) scale(0.85);
             z-index: 60000; display: flex; align-items: center; gap: 6px;
@@ -47,11 +48,9 @@
         input:checked + .slider { background: var(--accent); }
         input:checked + .slider:before { transform: translateX(12px); background: #fff; }
 
-        /* DEKORASI HOME (DATA STREAM) */
         .home-grid { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 30px 30px; opacity: 0.1; pointer-events: none; }
         .glitch-line { position: absolute; width: 100%; height: 1px; background: var(--accent); opacity: 0.2; top: 20%; animation: scanline 3s linear infinite; }
 
-        body.in-settings { background: radial-gradient(circle at right, #444 0%, #000 60%); }
         body.in-settings .bg-fix, body.in-settings .bg-overlay { display: none; }
         body.in-settings .glass-box { background: transparent; border: none; box-shadow: none; backdrop-filter: none; }
         body.in-settings #floatMenu, body.in-settings #profileContainer { display: none !important; }
@@ -85,7 +84,6 @@
         }
         .glass-box.expanded { height: 480px; }
 
-        /* NEW BACK BUTTON IN SETTINGS */
         .back-btn-corner { position: fixed; top: 25px; left: 20px; z-index: 99999; display: none; }
         body.in-settings .back-btn-corner { display: block; }
 
@@ -96,7 +94,7 @@
 
         .inner-glass-box { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 20px; padding: 15px; margin-top: 10px; text-align: left; }
         .media-area { width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 18px; margin-bottom: 12px; overflow: hidden; border: 1px solid var(--border); flex-shrink: 0; }
-        video, .media-img { width: 100%; height: 100%; object-fit: cover; }
+        video { width: 100%; height: 100%; object-fit: cover; }
 
         #dashboard { height: 100%; display: none; flex-direction: column; overflow: hidden; }
         .page { display: none; width: 100%; height: 100%; overflow-y: auto; padding: 5px 2px 25px 2px; scrollbar-width: none; }
@@ -108,22 +106,19 @@
         .btn-main { background: #fff; color: #000; }
         .btn-attack { background: var(--accent); color: #fff; margin-top: 5px; }
 
-        /* SOSMED ADDON STYLE */
         .sosmed-container { display: flex; gap: 10px; margin-top: 15px; }
         .sosmed-link { flex: 1; padding: 10px; background: rgba(255,0,0,0.1); border: 1px solid rgba(255,0,0,0.3); border-radius: 10px; text-align: center; text-decoration: none; font-family: var(--pixel-font); font-size: 6px; color: #fff; }
 
-        /* STATS BOX STYLE */
         .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 15px; position: relative; z-index: 2; }
-        .stat-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 8px; border-radius: 12px; text-align: left; }
+        .stat-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 8px; border-radius: 12px; }
         .stat-label { font-family: var(--pixel-font); font-size: 4px; color: red; opacity: 0.6; margin-bottom: 4px; }
         .stat-value { font-family: 'Orbitron'; font-size: 10px; color: #fff; }
 
-        /* ACCORDION FIX */
         .accordion-select { width: 100%; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; position: relative; z-index: 10; }
         .accordion-trigger { padding: 12px; display: flex; justify-content: space-between; font-family: var(--pixel-font); font-size: 8px; cursor: pointer; color: #fff; }
-        .accordion-content { max-height: 0; overflow: hidden; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); background: rgba(0,0,0,0.9); border-radius: 0 0 12px 12px; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: 0.4s; background: rgba(0,0,0,0.9); border-radius: 0 0 12px 12px; }
         .open-acc .accordion-content { max-height: 150px; border-top: 1px solid var(--border); }
-        .method-option { padding: 12px; font-family: var(--pixel-font); font-size: 7px; text-align: left; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .method-option { padding: 12px; font-family: var(--pixel-font); font-size: 7px; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.05); }
 
         .nav-container { position: fixed; bottom: 35px; width: 85%; max-width: 340px; height: 55px; background: rgba(0,0,0,0.85); backdrop-filter: blur(25px); border-radius: 20px; display: none; align-items: center; border: 1px solid var(--border); z-index: 10000; }
         .nav-item { flex: 1; text-align: center; font-family: var(--pixel-font); font-size: 7px; cursor: pointer; opacity: 0.4; }
@@ -152,18 +147,15 @@
 
     <div id="sidePanel" class="side-panel">
         <h2 style="font-family: 'Nosifer'; font-size: 10px; color: red; margin-bottom: 25px; text-align: center;">STARK CORE</h2>
-        <div class="inner-glass-box" style="margin-top: 0; padding: 15px;">
-            <p style="font-family: var(--pixel-font); font-size: 7px; color: red; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 5px;">[ USER_INFO ]</p>
+        <div class="inner-glass-box">
+            <p style="font-family: var(--pixel-font); font-size: 7px; color: red; border-bottom: 1px solid var(--border); padding-bottom: 5px;">[ USER_INFO ]</p>
             <div style="font-family: var(--pixel-font); font-size: 6px; color: #fff; line-height: 2.2;">
                 <p>NAME : GALXY</p>
                 <p>ROLE : OWNER</p>
             </div>
         </div>
-        <div class="inner-glass-box" onclick="goToSetting()" style="cursor: pointer; margin-top: 15px; padding: 15px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <p style="font-family: var(--pixel-font); font-size: 7px; color: #fff;">INFO LENGKAP</p>
-                <span style="font-size: 8px; color: red;">></span>
-            </div>
+        <div class="inner-glass-box" onclick="goToSetting()" style="cursor: pointer; margin-top: 15px;">
+            <p style="font-family: var(--pixel-font); font-size: 7px; color: #fff;">INFO LENGKAP ></p>
         </div>
         <p style="color: red; cursor: pointer; margin-top: 30px; font-family: var(--pixel-font); font-size: 7px; text-align: center;" onclick="location.reload()">> SHUTDOWN_</p>
     </div>
@@ -182,7 +174,11 @@
     <div class="main-container">
         <div id="mainBox" class="glass-box">
             <div id="login-screen" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                <div class="media-area"><video autoplay loop muted playsinline><source src="login_banner.mp4"></video></div>
+                <div class="media-area">
+                    <video autoplay loop muted playsinline>
+                        <source src="login_banner.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <h2 style="font-family: 'Nosifer'; font-size: 11px; margin-bottom: 15px; color: red;">AUTHENTICATION</h2>
                 <input type="text" id="userInput" placeholder="IDENTITY">
                 <input type="password" id="passInput" placeholder="ACCESS KEY">
@@ -193,7 +189,7 @@
                 <div id="home" class="page active-page">
                     <div class="home-grid"></div>
                     <div class="glitch-line"></div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; padding: 0 5px; position: relative; z-index: 2;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; position: relative; z-index: 2;">
                         <h2 style="font-family: 'Nosifer'; font-size: 12px; color: red;">STARK</h2>
                         <p id="realTime" style="font-family: var(--pixel-font); font-size: 7px; color: rgba(255,255,255,0.6);">00:00</p>
                     </div>
@@ -209,19 +205,26 @@
                         </div>
                     </div>
 
-                    <div class="media-area" style="position: relative; z-index: 2;"><video autoplay loop muted playsinline><source src="video.mp4"></video></div>
-                    <div class="bio-box" style="background: rgba(255,0,0,0.05); border: 1px solid var(--border); border-radius: 15px; padding: 15px; text-align: left; position: relative; z-index: 2; border-left: 3px solid red;">
-                        <p style="font-family: var(--pixel-font); font-size: 5px; color: red; margin-bottom: 4px;">[ STATUS: ONLINE ]</p>
-                        <p style="font-family: var(--pixel-font); font-size: 6px; line-height: 1.8; color: #fff;">Welcome to the Void.<br>Monitoring all active nodes. Connection secure.</p>
+                    <div class="media-area" style="position: relative; z-index: 2;">
+                        <video autoplay loop muted playsinline>
+                            <source src="video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="bio-box" style="background: rgba(255,0,0,0.05); border: 1px solid var(--border); border-radius: 15px; padding: 15px; border-left: 3px solid red; position: relative; z-index: 2;">
+                        <p style="font-family: var(--pixel-font); font-size: 5px; color: red;">[ STATUS: ONLINE ]</p>
+                        <p style="font-family: var(--pixel-font); font-size: 6px; line-height: 1.8; color: #fff;">Welcome to the Void. Connection secure.</p>
                     </div>
                 </div>
 
                 <div id="bug" class="page">
-                    <div class="media-area"><video autoplay loop muted playsinline><source src="bug.mp4"></video></div>
-                    <h1 style="font-family: 'Orbitron', sans-serif; font-size: 14px; color: #ff0000; margin-bottom: 15px;">STARKXBUG</h1>
-                    <div class="label-text">TARGET_NUMBER</div>
+                    <div class="media-area">
+                        <video autoplay loop muted playsinline>
+                            <source src="bug.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h1 style="font-family: 'Orbitron'; font-size: 14px; color: #ff0000;">STARKXBUG</h1>
+                    <div class="label-text">TARGET</div>
                     <input type="text" placeholder="628xxxxxx">
-                    <div class="label-text">ATTACK_METHOD</div>
                     <div class="accordion-select" id="accMenu">
                         <div class="accordion-trigger" onclick="toggleAcc(event)"><span id="selectedVal">SELECT...</span><span>▼</span></div>
                         <div class="accordion-content">
@@ -229,49 +232,30 @@
                             <div class="method-option" onclick="setMethod('OVERLOAD v2')">OVERLOAD v2</div>
                         </div>
                     </div>
-                    <button class="btn-attack" onclick="alert('PAYLOAD SENT!')">LAUNCH ATTACK</button>
+                    <button class="btn-attack" onclick="alert('PAYLOAD SENT!')">LAUNCH</button>
                 </div>
                 
                 <div id="qredit" class="page">
-                    <h2 style="font-family: 'Nosifer'; font-size: 11px; color: red; margin-bottom: 20px; text-align: center;">STARK_NET</h2>
-                    <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 20px; padding: 20px; margin-bottom: 15px; position: relative; border-right: 3px solid red;">
-                        <div style="position: absolute; top:0; right:0; padding: 5px; font-family: var(--pixel-font); font-size: 4px; color: red; opacity: 0.5;">SECURED_TRANS</div>
-                        <p style="font-family: var(--pixel-font); font-size: 7px; color: red; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 5px;">[ TRANSMISSION ]</p>
-                        <p style="font-family: var(--pixel-font); font-size: 6px; line-height: 2.2; color: #ddd; text-align: justify;">
-                            Wassup Bre! <span style="color: red;">STARK CORE</span> is a masterpiece. Stay anonymous, stay elite. Respect the grind.
-                        </p>
+                    <h2 style="font-family: 'Nosifer'; font-size: 11px; color: red; text-align: center;">STARK_NET</h2>
+                    <div class="inner-glass-box">
+                        <p style="font-family: var(--pixel-font); font-size: 6px; color: #ddd;">STARK CORE is a masterpiece. Stay anonymous.</p>
                     </div>
-                    <div style="text-align: left; padding: 0 5px;">
-                        <p style="font-family: var(--pixel-font); font-size: 7px; color: red; margin-bottom: 8px;">// NODES</p>
-                        <div class="inner-glass-box" style="margin-top:0; border-left: 2px solid red;">
-                            <p style="font-family: var(--pixel-font); font-size: 5px; color: #fff;">CORE: LANGX STARK<br>ENGINE: STARK_GLASS_V2</p>
-                        </div>
-                    </div>
-
                     <div class="sosmed-container">
-                        <a href="https://github.com/yourprofile" class="sosmed-link">GITHUB</a>
-                        <a href="https://wa.me/628xxxx" class="sosmed-link">WHATSAPP</a>
+                        <a href="#" class="sosmed-link">GITHUB</a>
+                        <a href="#" class="sosmed-link">WHATSAPP</a>
                     </div>
                 </div>
 
                 <div id="setting" class="page">
                     <div class="setting-header">
-                        <div class="setting-banner"><img src="banner.jpg" alt="Banner"></div>
+                        <div class="setting-banner">
+                            <img src="banner.jpg" alt="Banner">
+                        </div>
                         <div class="pfp-overlap-center"></div>
                     </div>
-                    <div style="text-align: center; margin-bottom: 20px;">
-                        <h2 style="font-family: 'Orbitron'; font-size: 14px; color: #fff; letter-spacing: 2px;">GALXY</h2>
-                        <p style="font-family: var(--pixel-font); font-size: 6px; color: red; margin-top: 5px;">STARK CORE OWNER</p>
-                    </div>
-                    <div style="padding: 0 15px 10px 15px;">
-                        <div class="inner-glass-box">
-                            <p style="font-family: var(--pixel-font); font-size: 7px; color: red; margin-bottom: 10px; border-bottom: 1px solid var(--border); padding-bottom: 5px;">[ PROJECT JOURNEY ]</p>
-                            <p style="font-family: var(--pixel-font); font-size: 5.5px; line-height: 1.8; color: #ccc;">
-                                <b>2022:</b> Proyek Langx Stark resmi dibuat.<br>
-                                <b>2024:</b> Integrasi Liquid Glass UI.<br>
-                                <b>Sekarang:</b> Terus berkembang.
-                            </p>
-                        </div>
+                    <div style="text-align: center;">
+                        <h2 style="font-family: 'Orbitron'; color: #fff;">GALXY</h2>
+                        <p style="font-family: var(--pixel-font); font-size: 6px; color: red;">OWNER</p>
                     </div>
                 </div>
             </div>
@@ -286,11 +270,7 @@
 
     <script>
         const bgm = document.getElementById('bgm');
-
-        function toggleBGM(el) {
-            if(el.checked) { bgm.play().catch(e => {}); }
-            else { bgm.pause(); }
-        }
+        function toggleBGM(el) { if(el.checked) bgm.play().catch(e=>{}); else bgm.pause(); }
 
         function checkLogin() {
             if(document.getElementById('userInput').value === "123" && document.getElementById('passInput').value === "123") {
@@ -300,32 +280,17 @@
                 document.getElementById('floatMenu').style.display = 'flex';
                 document.getElementById('profileContainer').style.display = 'flex'; 
                 moveNav(0, 'home');
-                startClock();
+                setInterval(() => {
+                    document.getElementById('realTime').innerText = new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+                }, 1000);
             } else { alert("ACCESS DENIED!"); }
         }
 
-        function startClock() {
-            setInterval(() => {
-                const now = new Date();
-                document.getElementById('realTime').innerText = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-            }, 1000);
-        }
-
-        function toggleAcc(e) {
-            e.stopPropagation();
-            document.getElementById('accMenu').classList.toggle('open-acc');
-        }
-
-        function setMethod(val) {
-            document.getElementById('selectedVal').innerText = val;
-            document.getElementById('accMenu').classList.remove('open-acc');
-        }
-
         function toggleSideMenu() {
-            const sidePanel = document.getElementById('sidePanel');
-            const menuOverlay = document.getElementById('menuOverlay');
-            sidePanel.classList.toggle('open');
-            menuOverlay.style.display = sidePanel.classList.contains('open') ? 'block' : 'none';
+            const sp = document.getElementById('sidePanel');
+            const ov = document.getElementById('menuOverlay');
+            sp.classList.toggle('open');
+            ov.style.display = sp.classList.contains('open') ? 'block' : 'none';
         }
 
         function goToSetting() {
@@ -341,17 +306,12 @@
             moveNav(0, 'home');
         }
 
-        function moveNav(index, pageId) {
+        function toggleAcc(e) { e.stopPropagation(); document.getElementById('accMenu').classList.toggle('open-acc'); }
+        function setMethod(v) { document.getElementById('selectedVal').innerText = v; document.getElementById('accMenu').classList.remove('open-acc'); }
+
+        function moveNav(idx, id) {
             const box = document.getElementById('mainBox');
-            box.classList.toggle('expanded', pageId !== 'home' && pageId !== 'login-screen');
+            box.classList.toggle('expanded', id !== 'home' && id !== 'login-screen');
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
-            if(pageId !== -1) document.getElementById(pageId).classList.add('active-page');
-            
-            const navItems = document.querySelectorAll('.nav-item');
-            navItems.forEach((item, i) => {
-                item.style.opacity = (i === index) ? "1" : "0.4";
-            });
-        }
-    </script>
-</body>
-</html>
+            if(id !== -1) document.getElementById(id).classList.add('active-page');
+            document.querySelectorAll('.nav-item').forEach((it, i
